@@ -29,8 +29,8 @@ This server provides MCP-compatible access to various Composio applications like
    - Navigate to Features -> Add MCP Server
    - Add the following command:
      ```bash
-     COMPOSIO_API_KEY=<composio_api_key> node /path/to/composio-mcp-server/build/index.js
+     COMPOSIO_API_KEY=<composio_api_key> COMPOSIO_APPS=gmail,linear node /path/to/composio-mcp-server/build/index.js
      ```
    - Replace `/path/to/composio-mcp-server` with the actual path where you cloned the repository
    - Replace `<composio_api_key>` with your actual Composio API Key
-
+   - Replace `<app1,app2,...>` with a comma-separated list of Composio apps you want to enable, such as `gmail,linear`

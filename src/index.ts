@@ -4,6 +4,7 @@ import { RequestHandlerExtra } from "@modelcontextprotocol/sdk/shared/protocol.j
 import { LangchainToolSet } from "composio-core";
 
 const COMPOSIO_API_KEY = process.env.COMPOSIO_API_KEY;
+const apps = process.env.COMPOSIO_APPS ? [...new Set(process.env.COMPOSIO_APPS.split(",").concat("composio"))] : ["gmail", "linear", "composio"];
 
 if (!COMPOSIO_API_KEY) {
   throw new Error("COMPOSIO_API_KEY is not set");
@@ -64,11 +65,7 @@ async function addComposioTool(server: McpServer, appName: string): Promise<void
 async function main(): Promise<void> {
   try {
     // Add tools from various Composio apps
-    await Promise.all([
-      addComposioTool(server, "gmail"),
-      addComposioTool(server, "linear"),
-      addComposioTool(server, "composio"),
-    ]);
+    await Promise.all(apps.map(appName => addComposioTool(server, appName)));
 
     // Initialize and connect transport
     const transport = new StdioServerTransport();
