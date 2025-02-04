@@ -14,6 +14,9 @@ importers:
       composio-core:
         specifier: ^0.5.7
         version: 0.5.7(@ai-sdk/openai@0.0.36(zod@3.24.1))(@cloudflare/workers-types@4.20250129.0)(@langchain/core@0.2.36(openai@4.82.0(zod@3.24.1)))(@langchain/openai@0.2.11)(ai@3.4.33(openai@4.82.0(zod@3.24.1))(react@19.0.0)(sswr@2.1.0(svelte@5.19.7))(svelte@5.19.7)(vue@3.5.13(typescript@5.7.3))(zod@3.24.1))(langchain@0.2.20(axios@1.7.9)(openai@4.82.0(zod@3.24.1)))(openai@4.82.0(zod@3.24.1))
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       zod:
         specifier: ^3.24.1
         version: 3.24.1
@@ -460,6 +463,10 @@ packages:
 
   diff-match-patch@1.0.5:
     resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
+
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+    engines: {node: '>=12'}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1543,6 +1550,8 @@ snapshots:
   dequal@2.0.3: {}
 
   diff-match-patch@1.0.5: {}
+
+  dotenv@16.4.7: {}
 
   emoji-regex@8.0.0: {}
 

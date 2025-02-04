@@ -23,6 +23,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.4.0",
     "composio-core": "^0.5.7",
+    "dotenv": "^16.4.7",
     "zod": "^3.24.1"
   }
 }
