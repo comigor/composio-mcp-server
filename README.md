@@ -20,7 +20,7 @@ This server provides MCP-compatible access to various Composio applications like
 
 2. Install dependencies and build the project:
    ```bash
-   pnpm install && pnppm build
+   pnpm install && pnpm build
    ```
 
 ## Installation guide for composer 
