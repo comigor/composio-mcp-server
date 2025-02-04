@@ -18,19 +18,15 @@ This server provides MCP-compatible access to various Composio applications like
    cd composio-mcp-server
    ```
 
-2. Install dependencies and build the project:
+2. Install dependencies:
    ```bash
-   pnpm install && pnpm build
+   pnpm install
    ```
 
-## Configuration
-
-- Create a `.env` file in the root directory of the project.
-- Add the following environment variables to the `.env` file:
-  ```
-  COMPOSIO_API_KEY=<your_composio_api_key>
-  COMPOSIO_APPS=gmail,linear
-  ```
+3. Build and run the project:
+   ```bash
+   pnpm build && node build/index.js
+   ```
 
 ## Installation guide for composer 
 
@@ -38,7 +34,8 @@ This server provides MCP-compatible access to various Composio applications like
    - Navigate to Features -> Add MCP Server
    - Add the following command:
      ```bash
-     node /path/to/composio-mcp-server/start.js
+     env COMPOSIO_API_KEY=<composio_api_key> env COMPOSIO_APPS=gmail,linear node /path/to/composio-mcp-server/build/index.js
      ```
    - Replace `/path/to/composio-mcp-server` with the actual path where you cloned the repository
-   - Ensure your `.env` file is correctly configured with your Composio API Key and desired apps
+   - Replace `<composio_api_key>` with your composio api key
+
