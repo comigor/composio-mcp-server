@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { RequestHandlerExtra } from "@modelcontextprotocol/sdk/shared/protocol.js";
 import { LangchainToolSet } from "composio-core";
 
 const COMPOSIO_API_KEY = process.env.COMPOSIO_API_KEY;
-const apps = process.env.COMPOSIO_APPS ? [...new Set(process.env.COMPOSIO_APPS.split(",").concat("composio"))] : ["gmail", "linear", "composio"];
+const apps = process.env.COMPOSIO_APPS ? [...new Set(process.env.COMPOSIO_APPS.split(","))] : ["GMAIL", "GOOGLETASKS", "GOOGLECALENDAR", "GOOGLEDRIVE", "GOOGLESHEETS", "GOOGLEDOCS", "GOOGLE_MAPS"];
 
 if (!COMPOSIO_API_KEY) {
   throw new Error("COMPOSIO_API_KEY is not set");
